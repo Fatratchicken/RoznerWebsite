@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Land Fragrance</title>
+    <link rel="icon" href="icon.png" type="image/png"> <!-- Added favicon -->
+    <style>
+        @font-face {
+            font-family: 'GreatVibes';
+            src: url('GreatVibes-Regular.ttf') format('truetype');
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: white;
+            color: black;
+            padding: 30px 0;
+            font-size: 28px;
+            font-family: 'GreatVibes', serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .header-buttons button {
+            font-size: 16px;
+            padding: 5px 10px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .header-buttons button img {
+            width: 20px;
+            height: 20px;
+        }
+        .header-buttons button:hover {
+            transform: scale(1.1);
+        }
+        .selection-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .selection {
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+        .selection.male {
+            background-image: url('vintage-blue-background.jpg');
+        }
+        .selection.female {
+            background-image: url('female.png'); /* Female.png as background */
+        }
+        .blue-bottle {
+            position: absolute;
+            right: -70px;
+            bottom: -20px;
+            width: 350px;
+            height: auto;
+            z-index: 1;
+        }
+        .pink-bottle {
+            position: absolute;
+            right: -70px;
+            bottom: -20px;
+            width: 350px;
+            height: auto;
+            z-index: 1;
+        }
+        .selection label {
+            position: absolute;
+            left: 5%;
+            transform: translateX(0);
+            color: white;
+            font-family: 'GreatVibes', serif;
+            font-size: 100px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            z-index: 2;
+        }
+        .selection.male label {
+            bottom: 20px;
+        }
+        .selection.female label {
+            bottom: 140px; /* Positioned even higher */
+            font-size: 120px; /* Made the text bigger */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>Holy Land Fragrance</div>
+        <div class="header-buttons">
+            <button><img src="menus.png" alt="Menu"></button>
+            <button><img src="magnifying-glass.png" alt="Search"></button>
+        </div>
+    </header>
+
+    <div class="selection-container">
+        <div class="selection male">
+            <img src="blueBottle.png" alt="Blue Bottle" class="blue-bottle"> <!-- Blue bottle image -->
+            <label for="male">Male</label>
+        </div>
+        <div class="selection female">
+            <img src="pinkBottle.png" alt="Pink Bottle" class="pink-bottle"> <!-- Pink bottle image -->
+            <label for="female">Female</label>
+        </div>
+    </div>
+</body>
+</html>
